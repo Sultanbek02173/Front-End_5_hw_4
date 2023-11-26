@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+.navbar{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav{
+    width: 87%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav button{
+    padding: 5px 15px;
+    border-radius: 25px;
+    background: none;
+    transition: .5s all;
+}
+
+nav button:hover{
+    background: black;
+    color: white;
+}
+
+.main{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main .item_box{
+    width: 31%;
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.main .item_box div:first-child{
+    width: 100%;
+    overflow: hidden;
+}
+
+.main .item_box div:first-child img{
+    width: 100%;
+    border-radius: 5px;
+    transition: .5s all;
+
+}
+
+.main .item_box div:first-child img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.main .item_box div:nth-child(2){
+    position: relative;
+    padding: 5px 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.main .item_box div:nth-child(2) .price{
+    position: absolute;
+    top: 25px;
+    right: -8px;
+    padding: 5px 15px;
+    background-color: rgb(3, 61, 207);
+    color: white;
+}
+
+.main .item_box div:nth-child(2) h2{
+    font-weight: normal;
+    color: grey;
+    font-size: 20px;
+}
+
+.main .item_box div:nth-child(2) div{
+    padding: 0;
+    font-size: 15px;
+    color: rgb(246, 198, 5);
+}
+
+.main .item_box div:nth-child(2) span{
+    font-size: 12px;
+    margin-left: 20px;
+    color: black;
+}
+
+.main .item_box div:nth-child(2) p{
+    font-size: 14px;
+}
+
+.main .item_box div:nth-child(2) .wrapper_box{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .item_box div:nth-child(2) .wrapper_box .wrapper_item{
+    width: 33%;
+    border-right: 1px solid rgb(185, 185, 185);
+    margin-left: 25px;
+    padding-left: 10px;
+}
+
+.main .item_box div:nth-child(2) .wrapper_box .wrapper_item:nth-child(3){
+
+    border: none;
+}
+
+.main .item_box div:nth-child(2) .wrapper_box .wrapper_item p:first-child{
+    color: black;
+}
+
+.main .item_box div:nth-child(2) .wrapper_box .wrapper_item p:nth-child(2){
+    color: rgb(90, 90, 90);
+    font-size: 12px;
+}
+
