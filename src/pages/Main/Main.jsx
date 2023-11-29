@@ -14,7 +14,7 @@ const Main = ({ link, setLink }) => {
                 <div>
                     <Link onClick={() => {
                         setLink('https://themesflat.co/html/educate/images/index/course1.jpg');
-                    }} to='/posts'>
+                    }} to='/details'>
                         <img src="https://themesflat.co/html/educate/images/index/course1.jpg" alt="" />
                     </Link>
                 </div>
@@ -75,7 +75,7 @@ const Main = ({ link, setLink }) => {
                 <div>
                     <Link onClick={() => {
                         setLink('https://themesflat.co/html/educate/images/index/course2.jpg')
-                    }} to="/posts">
+                    }} to="/details">
                         <img src="https://themesflat.co/html/educate/images/index/course2.jpg" alt="" />
                     </Link>
 
@@ -137,7 +137,7 @@ const Main = ({ link, setLink }) => {
                 <div>
                     <Link onClick={() => {
                         setLink('https://themesflat.co/html/educate/images/index/course3.jpg')
-                    }} to="/posts">
+                    }} to="/details">
                         <img src="https://themesflat.co/html/educate/images/index/course3.jpg" alt="" />
                     </Link>
 

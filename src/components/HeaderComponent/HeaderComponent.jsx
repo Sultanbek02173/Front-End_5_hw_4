@@ -1,16 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import classes from './styles.module.css';
 
 const HeaderComponent = () => {
+
+    const location = useLocation();
+    const navigate = useNavigate();
+    // console.log(location);
+
+    const onBack = () => navigate(location.state?.from, {state: { from: location.pathname } });
+
     return (
         <nav>
             <ul className={classes.navbar}>
-                <li><Link to='/'>Main</Link></li>
-                <li><Link to='/posts'>Post</Link></li>
-                <li><Link to='/users'>Users</Link></li>
+                <li><Link state={{ from: location.pathname }} to='/'>Main</Link></li>
+                <li><Link state={{ from: location.pathname }} to='/posts'>Post</Link></li>
+                <li><Link state={{ from: location.pathname }} to='/users'>Users</Link></li>
             </ul>
-            <button>Back</button>
+            <button onClick={onBack}>Back</button>
 
         </nav>
     );

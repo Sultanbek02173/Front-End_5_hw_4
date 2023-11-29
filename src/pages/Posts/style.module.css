@@ -1,0 +1,37 @@
+.scrollContainer {
+    margin: 40px auto;
+    width: 90%;
+    height: 80vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    background-color: rgb(163, 163, 163);
+}
+
+.cont{
+    width: 90%;
+    padding: 40px 20px;
+    height: 90px;
+    margin: 60px auto;
+    border: 1px solid rgb(0, 237, 237);
+    display: flex;
+}
+
+.item:first-child{
+    width: 90%;
+    display: block;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+}
+
+.item button a{
+    text-decoration: none;
+    color: black;
+}
+
+.cont h1, h2, span{
+   padding: 0;
+   margin: 0; 
+}
