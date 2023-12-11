@@ -1,31 +1,31 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    posts: [],
-    isLoading: true,
-    errorPost: '',
+    postsDetail: [],
+    isLoadingDetail: true,
+    errorPostDetail: '',
 }
 
 const postsDetailSlice = createSlice({
-    name: 'posts',
+    name: 'postsDetail',
     initialState,
     reducers:{
         setPosts: (state, action) =>{
-            state.posts = action.payload;
-            state.isLoading = true;
-            state.errorPost = '';
+            state.postsDetail = action.payload;
+            state.isLoadingDetail = false;
+            state.errorPostDetail = '';
         },
 
         setLoading: (state, action) =>{
-            state.posts = [];
-            state.isLoading = false;
-            state.errorPost = '';
+            state.postsDetail = [];
+            state.isLoadingDetail = true;
+            state.errorPostDetail = '';
         },
 
         setError: (state, action) => {
-            state.posts = [];
-            state.isLoading = false;
-            state.errorPost = action.payload;
+            state.postsDetail = [];
+            state.isLoadingDetail = false;
+            state.errorPostDetail = action.payload;
         },
     },
 });

@@ -3,7 +3,7 @@ import classes from './style.module.css';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { setPosts, setLoading, setError } from '../../redux/slice/postSlice';
+import fetchAllPosts from '../../redux/reducer/posts';
 
 const Posts = () => {
 
@@ -12,15 +12,7 @@ const Posts = () => {
     const location = useLocation();
 
     useEffect(() => {
-        setLoading(true);
-
-        fetch('https://jsonplaceholder.typicode.com/posts').then((res) => {
-            return res.json();
-        }).then((data) => {
-            dispatch(setPosts(data));
-        }).catch((err) => {
-            dispatch(setError(err.message));
-        });
+        dispatch(fetchAllPosts());
     }, [dispatch]);
 
     return (

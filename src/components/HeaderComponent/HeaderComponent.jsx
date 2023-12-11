@@ -14,7 +14,6 @@ const HeaderComponent = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location.state);
 
     const onBack = () => navigate(location.state?.from, {state: { from: location.pathname } });
 

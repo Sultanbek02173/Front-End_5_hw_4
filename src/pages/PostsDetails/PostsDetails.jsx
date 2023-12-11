@@ -9,7 +9,7 @@ import { setLoading, setPosts, setError } from '../../redux/slice/postDetailSlic
 const PostsDetails = () => {
 
     const dispatch = useDispatch();
-    const { posts, isLoading, errorPost } = useSelector((state) => state.posts)
+    const { postsDetail, isLoadingDetail, errorPostDetail } = useSelector((state) => state.postsDetail)
 
     const params = useParams();
     const navigate = useNavigate();
@@ -26,6 +26,7 @@ const PostsDetails = () => {
         }).catch((err) => {
             dispatch(setError(err.message));
         });
+
     }, [dispatch, params]);
 
     const onBack = () => navigate(location.state?.from, { state: { from: location.pathname } });
@@ -34,13 +35,13 @@ const PostsDetails = () => {
         <div className={classes.container}>
             <button onClick={onBack}>Back</button>
 
-            {errorPost && <div>{errorPost}</div>}
-            {isLoading && <div>Loading...</div>}
-            {posts && (
+            {errorPostDetail && <div>{errorPostDetail}</div>}
+            {isLoadingDetail && <div>Loading...</div>}
+            {postsDetail && (
                 <div>
-                    <h1>{posts.id}</h1>
-                    <h2>{posts.title}</h2>
-                    <p>{posts.body}</p>
+                    <h1>{postsDetail.id}</h1>
+                    <h2>{postsDetail.title}</h2>
+                    <p>{postsDetail.body}</p>
                 </div>
             )}
 
