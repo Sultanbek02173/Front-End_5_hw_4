@@ -25,7 +25,6 @@ const UsersDetails = () => {
             .finally(() => setIsLoading(false));
     }, []);
 
-
     return (
         <div>
             {
