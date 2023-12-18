@@ -5,6 +5,7 @@ const initialState = {
     posts: [],
     isLoading: false,
     errorPosts: '',
+    PostsListsStatus: 'pending',
 };
 
 const postsSlice = createSlice({

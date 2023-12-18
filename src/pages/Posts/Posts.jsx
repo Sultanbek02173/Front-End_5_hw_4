@@ -20,8 +20,13 @@ const Posts = () => {
             <div className={classes.scroll_page}>
 
             </div>
-            {errorPosts && <div>{errorPosts}</div>}
-            {isLoading && <div>Loading...</div>}
+            {errorPosts && <div className={classes.error}>
+                <div className={classes.page_404}>
+                    <p>404</p>
+                    <span>{errorPosts}</span>
+                </div>
+            </div>}
+            {isLoading && <div className={classes.loading}><div className={classes.lds_ring}><div></div><div></div><div></div><div></div></div></div>}
             {posts.length &&
                 posts.map((el) => (
                     <div className={classes.cont} key={el.id}>

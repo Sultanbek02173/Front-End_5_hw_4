@@ -35,8 +35,15 @@ const PostsDetails = () => {
         <div className={classes.container}>
             <button onClick={onBack}>Back</button>
 
-            {errorPostDetail && <div>{errorPostDetail}</div>}
-            {isLoadingDetail && <div>Loading...</div>}
+            {
+                errorPostDetail && <div className={classes.error}>
+                    <div className={classes.page_404}>
+                        <p>404</p>
+                        <span>{errorPostDetail}</span>
+                    </div>
+                </div>
+            }
+            {isLoadingDetail && <div className={classes.loading}><div className={classes.lds_ring}><div></div><div></div><div></div><div></div></div></div>}
             {postsDetail && (
                 <div>
                     <h1>{postsDetail.id}</h1>
